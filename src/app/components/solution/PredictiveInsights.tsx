@@ -37,7 +37,7 @@ export default function PredictiveInsights() {
           </h2>
           <p className="text-gray-600 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed px-4">
             Detect spikes, benchmark performance, forecast consumption, and
-            simulate long-term strategies with AI-powered analytics.
+            simulate long term strategies with AI powered analytics.
           </p>
         </div>
         

@@ -44,7 +44,7 @@ export default function Hero() {
         >
           Stop chasing data across departments. No more spreadsheet chaos. No more
           email trails. Wefetch centralizes all your sustainability and SDG
-          data—verified, structured, and always ready for reporting.
+          data verified, structured, and always ready for reporting.
         </motion.p>
 
         {/* CTA Buttons */}

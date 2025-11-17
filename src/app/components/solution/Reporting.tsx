@@ -31,7 +31,7 @@ export default function Reporting() {
             </h2>
 
             <p className="text-gray-600 text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed">
-              Generate audit-ready reports for BRSR, GRI, CDP, TCFD, SASB, and more
+              Generate audit ready reports for BRSR, GRI, CDP, TCFD, SASB, and more
               with automatic mapping and gap analysis.
             </p>
           </div>
