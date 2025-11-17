@@ -50,7 +50,7 @@ export default function WhatYouGet(): JSX.Element {
       description: "Works for SMEs and enterprises",
       icon: Zap,
       detailedDescription: "From startups to Fortune 500 companies, our platform scales with your needs. Flexible architecture supports single-site operations to complex multi-national deployments.",
-      metric: "500+",
+      metric: "Multiple",
       metricLabel: "Organizations"
     }
   ];
