@@ -68,7 +68,7 @@ export default function WhySustainability(): JSX.Element {
         {/* FINAL STATEMENT */}
         <div className="bg-gradient-to-r from-green-700 to-green-600 rounded-xl lg:rounded-2xl p-6 lg:p-10 text-center shadow-lg mx-2">
           <p className="text-lg sm:text-xl lg:text-2xl text-white font-semibold leading-relaxed">
-            Wefetch turns scattered sustainability data into continuous, actionable insights.
+            Wefetch - your virtual sustainability team turning data into real impact.
           </p>
         </div>
       </div>

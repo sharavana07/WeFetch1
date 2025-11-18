@@ -28,7 +28,7 @@ export default function DashboardsAnalytics() {
           {/* Feature cards in grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-4">
             {[
-              { icon: BarChart3, title: "500+ Sustainability Metrics", desc: "Comprehensive tracking" },
+              { icon: BarChart3, title: "Multiple Sustainability Metrics", desc: "Comprehensive tracking" },
               { icon: Zap, title: "Real-time Updates", desc: "Instant data refresh" },
               { icon: Palette, title: "Unlimited Custom Views", desc: "Tailored to your needs" },
               { icon: FileDown, title: "Export to PDF / PPT", desc: "Share with stakeholders" }
