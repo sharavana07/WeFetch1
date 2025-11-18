@@ -64,10 +64,15 @@ export default function ExpertSupport() {
 
         {/* CTA */}
         <div className="text-center mt-12 sm:mt-16">
-          <button className="group inline-flex items-center gap-3 bg-[#008B75] hover:bg-teal-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+          <a
+            href="https://calendly.com/balajiselvarajofficial/wefetch-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 bg-[#008B75] hover:bg-teal-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+          >
             Get Expert Guidance
             <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-          </button>
+          </a>
         </div>
 
       </div>

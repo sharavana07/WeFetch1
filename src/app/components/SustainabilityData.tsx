@@ -63,17 +63,22 @@ export default function ImpactStepsSection() {
           ))}
         </div>
 
-        {/* ================= CTA Button ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 flex justify-center"
-        >
-          <button className="px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-semibold shadow-lg transition-all">
-            Book a Free Consultation
-          </button>
-        </motion.div>
+       <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.8 }}
+  className="mt-16 flex justify-center"
+>
+  <a
+    href="https://calendly.com/balajiselvarajofficial/wefetch-demo"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-semibold shadow-lg transition-all"
+  >
+    Book a Free Consultation
+  </a>
+</motion.div>
+
 
       </div>
     </section>

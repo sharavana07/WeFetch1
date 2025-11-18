@@ -21,7 +21,7 @@ export default function Hero() {
           Sustainability Data Platform
         </motion.div>
 
-        {/* Main heading with stagger animation */}
+        {/* Main heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,9 +54,15 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
         >
-          <button className="px-8 py-4 bg-[#008B75] hover:bg-[#007563] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+          <a
+            href="https://calendly.com/balajiselvarajofficial/wefetch-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-[#008B75] hover:bg-[#007563] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+          >
             Get Started Free
-          </button>
+          </a>
+
           <button className="px-8 py-4 bg-white hover:bg-gray-50 text-[#008B75] font-semibold rounded-lg border-2 border-[#008B75] transition-all duration-300 hover:scale-105 w-full sm:w-auto">
             Watch Demo
           </button>

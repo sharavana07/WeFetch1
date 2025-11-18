@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import Link from "next/link";
+
 
 const HeroSection: React.FC = () => {
   return (
@@ -77,36 +79,28 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="flex flex-row justify-center gap-4"
         >
-          {/* Primary CTA */}
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            className="group relative px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-semibold shadow-lg shadow-emerald-900/20 hover:shadow-xl transition-all overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              Book a Free Demo
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
+          <Link href="https://calendly.com/balajiselvarajofficial/wefetch-demo" target="_blank">
+  <motion.button
+    whileHover={{ scale: 1.02, y: -2 }}
+    whileTap={{ scale: 0.98 }}
+    className="group relative px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-semibold shadow-lg shadow-emerald-900/20 hover:shadow-xl transition-all overflow-hidden"
+  >
+    <span className="relative z-10 flex items-center gap-2">
+      Book a Free Demo
+      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </span>
 
-            <motion.div
-              className="absolute inset-0 bg-linear-to-r from-emerald-600 to-emerald-700"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: 0 }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.button>
-
-          {/* Secondary CTA */}
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-white hover:bg-slate-50 text-emerald-800 border-2 border-emerald-700 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all"
-          >
-            Learn More
-          </motion.button>
-        </motion.div>
+    <motion.div
+      className="absolute inset-0 bg-linear-to-r from-emerald-600 to-emerald-700"
+      initial={{ x: "-100%" }}
+      whileHover={{ x: 0 }}
+      transition={{ duration: 0.3 }}
+    />
+  </motion.button>
+</Link>
+</motion.div>
       </div>
     </section>
   );

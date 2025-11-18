@@ -75,30 +75,29 @@ export default function Navbar() {
           }`}
         >
           <Link
-  href="/"
-  className="flex items-center space-x-2 group"
+            href="/"
+            className="flex items-center space-x-2 group"
+            onClick={() => setActiveLink("/")}
+          >
+            <Image
+              src={logo}
+              alt="Wefetch Logo"
+              className={`transition-all duration-300 group-hover:scale-110 ${
+                scrolled ? "w-8 h-8" : "w-10 h-10"
+              }`}
+              width={40}
+              height={40}
+              priority
+            />
 
-  onClick={() => setActiveLink("/")}>
-  
- <Image
-  src={logo}
-  alt="Wefetch Logo"
-  className={`transition-all duration-300 group-hover:scale-110 ${
-    scrolled ? "w-8 h-8" : "w-10 h-10"
-  }`}
-  width={40}
-  height={40}
-  priority
-/>
-
-  <span
-    className={`font-bold text-gray-900 tracking-tight transition-all duration-300 ${
-      scrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
-    }`}
-  >
-    Wefetch
-  </span>
-</Link>
+            <span
+              className={`font-bold text-gray-900 tracking-tight transition-all duration-300 ${
+                scrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+              }`}
+            >
+              Wefetch
+            </span>
+          </Link>
 
           {/* DESKTOP NAV LINKS */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
@@ -129,8 +128,10 @@ export default function Navbar() {
               </Link>
             ))}
 
+            {/* DESKTOP GET STARTED BUTTON */}
             <Link
-              href="/demo"
+              href="https://calendly.com/balajiselvarajofficial/wefetch-demo"
+              target="_blank"
               className={`ml-4 px-6 text-white font-semibold rounded-lg transition-all duration-300 shadow-sm hover:shadow-lg transform hover:scale-105 active:scale-95 ${
                 scrolled ? "py-2" : "py-2.5"
               }`}
@@ -187,8 +188,10 @@ export default function Navbar() {
                 </Link>
               ))}
 
+              {/* MOBILE GET STARTED BUTTON */}
               <Link
-                href="/demo"
+                href="https://calendly.com/balajiselvarajofficial/wefetch-demo"
+                target="_blank"
                 onClick={() => setMenuOpen(false)}
                 className="mt-2 px-4 py-3 text-white text-center rounded-lg font-semibold transition-all duration-200 shadow-md active:scale-95"
                 style={{

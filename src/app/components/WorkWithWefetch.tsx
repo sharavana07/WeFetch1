@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Link from "next/link"; // ⭐ Import Link
 
 export default function WhyCompaniesWork() {
   const features = [
@@ -37,10 +38,7 @@ export default function WhyCompaniesWork() {
               transition={{ delay: 0.15 * index, duration: 0.6 }}
               className="flex items-start gap-3"
             >
-              {/* Icon */}
               <CheckCircle className="w-6 h-6 text-emerald-600 mt-1" />
-
-              {/* Feature text */}
               <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
                 {text}
               </p>
@@ -55,11 +53,16 @@ export default function WhyCompaniesWork() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-14"
         >
-          <button
-            className="px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition-all"
+          <Link
+            href="https://calendly.com/balajiselvarajofficial/wefetch-demo"
+            target="_blank"   // ⭐ Opens in new tab (optional)
           >
-            Take the Next Step
-          </button>
+            <button
+              className="px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition-all"
+            >
+              Take the Next Step
+            </button>
+          </Link>
         </motion.div>
       </div>
     </section>
