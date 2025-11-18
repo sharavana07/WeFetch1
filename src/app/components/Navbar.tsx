@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../public/wefetch.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -72,36 +74,31 @@ export default function Navbar() {
             scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
           }`}
         >
-          {/* LOGO */}
           <Link
-            href="/"
-            className="flex items-center space-x-2 group"
-            onClick={() => setActiveLink("/")}
-          >
-            <div
-              className={`border-2 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 ${
-                scrolled ? "w-8 h-8" : "w-9 h-9"
-              }`}
-              style={{ borderColor: darkGreen }}
-            >
-              <span
-                className={`font-bold transition-all duration-300 ${
-                  scrolled ? "text-sm" : "text-base"
-                }`}
-                style={{ color: darkGreen }}
-              >
-                W
-              </span>
-            </div>
+  href="/"
+  className="flex items-center space-x-2 group"
 
-            <span
-              className={`font-bold text-gray-900 tracking-tight transition-all duration-300 ${
-                scrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
-              }`}
-            >
-              Wefetch
-            </span>
-          </Link>
+  onClick={() => setActiveLink("/")}>
+  
+ <Image
+  src={logo}
+  alt="Wefetch Logo"
+  className={`transition-all duration-300 group-hover:scale-110 ${
+    scrolled ? "w-8 h-8" : "w-10 h-10"
+  }`}
+  width={40}
+  height={40}
+  priority
+/>
+
+  <span
+    className={`font-bold text-gray-900 tracking-tight transition-all duration-300 ${
+      scrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+    }`}
+  >
+    Wefetch
+  </span>
+</Link>
 
           {/* DESKTOP NAV LINKS */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
