@@ -24,6 +24,7 @@ export default function Services() {
   // Sync tab state with router state if navigated from Mega Menu
   useEffect(() => {
     if (location.state && typeof location.state.tab === 'number') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveTab(location.state.tab);
       window.scrollTo(0, 0);
     }

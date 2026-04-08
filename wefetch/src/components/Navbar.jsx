@@ -14,6 +14,7 @@ export default function Navbar() {
   }, []);
 
   // Close menu on route change
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setMenuOpen(false); document.body.style.overflow = ''; }, [pathname]);
 
   const toggleMenu = () => {

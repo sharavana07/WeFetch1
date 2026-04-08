@@ -1,4 +1,4 @@
-import { createElement } from 'react';
+import React from 'react';
 
 const IconBase = ({ className = '', name, ...rest }) => (
   <i className={`las ${name} ${className}`} style={{ fontSize: '1.4em', verticalAlign: 'middle', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...rest.style }} {...rest} />
