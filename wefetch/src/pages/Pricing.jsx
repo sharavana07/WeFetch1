@@ -34,55 +34,58 @@ export default function Pricing() {
       <Section className="pricing-plans bg-dark-2">
         <div className="container">
           <div className="plans-grid fade-up delay-1">
+            
+            {/* CBAM Team */}
             <div className="plan-card">
-              <h3>Starter</h3>
-              <p className="plan-desc">For small teams getting started with compliance.</p>
+              <h3>CBAM Team</h3>
+              <p className="plan-desc">End-to-End CBAM Compliance. Fully Managed.</p>
               <div className="plan-price">
-                <span className="currency">$</span>
-                <span className="amount">499</span>
-                <span className="period">/mo</span>
+                <span className="currency">₹</span>
+                <span className="amount">3.5L</span>
+                <span className="period">/year</span>
               </div>
               <ul className="plan-features">
-                <li><i className="las la-check"></i> 1 Dedicated Team Member</li>
-                <li><i className="las la-check"></i> Basic BRSR Framework</li>
-                <li><i className="las la-check"></i> Monthly Data Reviews</li>
-                <li><i className="las la-check"></i> Standard Support</li>
+                <li><i className="las la-check"></i> Product & process mapping</li>
+                <li><i className="las la-check"></i> Emissions calculation</li>
+                <li><i className="las la-check"></i> Quarterly reporting support</li>
+                <li><i className="las la-check"></i> Verification-ready documentation</li>
               </ul>
-              <Link to="#" className="btn btn-outline">Get Started</Link>
+              <Link to="/contact" className="btn btn-outline">Get Started</Link>
             </div>
 
+            {/* EcoVadis V-Team */}
             <div className="plan-card popular">
               <div className="popular-badge">Most Popular</div>
-              <h3>Professional</h3>
-              <p className="plan-desc">For growing companies with cross-border needs.</p>
-              <div className="plan-price">
-                <span className="currency">$</span>
-                <span className="amount">1,299</span>
-                <span className="period">/mo</span>
+              <h3>EcoVadis V-Team</h3>
+              <p className="plan-desc">End-to-End EcoVadis Assessment. Fully Managed.</p>
+              <div className="plan-price" style={{ minHeight: '60px', display: 'flex', alignItems: 'center' }}>
+                <span className="amount text-lg" style={{ fontSize: '1.5rem', fontWeight: '500' }}>Custom Pricing</span>
               </div>
               <ul className="plan-features">
-                <li><i className="las la-check"></i> 3 Dedicated Team Members</li>
-                <li><i className="las la-check"></i> CBAM & CSRD Support</li>
-                <li><i className="las la-check"></i> Weekly Strategy Calls</li>
-                <li><i className="las la-check"></i> Priority Support</li>
+                <li><i className="las la-check"></i> Setup & Gap Analysis</li>
+                <li><i className="las la-check"></i> Data & Document Management</li>
+                <li><i className="las la-check"></i> Response Optimization</li>
+                <li><i className="las la-check"></i> Submission & Review handling</li>
               </ul>
-              <Link to="#" className="btn btn-primary">Start Free Trial</Link>
+              <Link to="/contact" className="btn btn-primary">Get Price</Link>
             </div>
 
+            {/* Custom Team */}
             <div className="plan-card">
-              <h3>Enterprise</h3>
-              <p className="plan-desc">For large organizations requiring comprehensive management.</p>
-              <div className="plan-price">
-                <span className="amount text-lg">Custom</span>
+              <h3>Custom Team</h3>
+              <p className="plan-desc">A fully dedicated ESG setup tailored to your organization.</p>
+              <div className="plan-price" style={{ minHeight: '60px', display: 'flex', alignItems: 'center' }}>
+                <span className="amount text-lg" style={{ fontSize: '1.5rem', fontWeight: '500' }}>Custom Pricing</span>
               </div>
               <ul className="plan-features">
-                <li><i className="las la-check"></i> Full Virtual Sustainability Team</li>
-                <li><i className="las la-check"></i> All Global Frameworks</li>
-                <li><i className="las la-check"></i> Direct API Integrations</li>
-                <li><i className="las la-check"></i> 24/7 Dedicated Support Head</li>
+                <li><i className="las la-check"></i> Dedicated ESG Manager</li>
+                <li><i className="las la-check"></i> Multiple frameworks managed</li>
+                <li><i className="las la-check"></i> Monthly ESG reporting</li>
+                <li><i className="las la-check"></i> Continuous tracking</li>
               </ul>
-              <Link to="#" className="btn btn-outline">Contact Sales</Link>
+              <Link to="/contact" className="btn btn-outline">Get Price</Link>
             </div>
+
           </div>
         </div>
       </Section>

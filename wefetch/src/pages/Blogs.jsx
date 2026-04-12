@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
-import './Pricing.css'; // Just reusing pricing css for container and basics if needed or custom inline
+import { useEffect, useRef, useState } from 'react';
+import './Pricing.css'; 
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -16,7 +16,21 @@ function Section({ children, className = '' }) {
   return <section ref={ref} className={className}>{children}</section>;
 }
 
+const BOUNCE_BLOGS = [
+  {
+    title: 'Emission Leakage: Meaning, Causes, Example and how to prevent it',
+    desc: 'In the fight against climate change, countries around the world are setting strict rules to lower carbon footprints. While this is great for the planet, it sometimes leads to a tricky problem called emission leakage.',
+    link: '/emission-leakage-meaning-causes-examples-prevention'
+  }
+];
+
 export default function Blogs() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <main className="blogs-page" style={{ paddingTop: '100px', minHeight: '80vh' }}>
       <Section className="blogs-hero">
@@ -28,14 +42,37 @@ export default function Blogs() {
             </p>
           </div>
           
-          <div className="fade-up delay-1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            <div className="plan-card" style={{ textAlign: 'left', display: 'flex', flexDirection: 'column' }}>
-              <h3>Emission Leakage: Meaning, Causes, Example and how to prevent it</h3>
-              <p className="plan-desc" style={{ marginTop: '1rem', flexGrow: 1 }}>
-                In the fight against climate change, countries around the world are setting strict rules to lower carbon footprints. While this is great for the planet, it sometimes leads to a tricky problem called emission leakage.
-              </p>
-              <Link to="/emission-leakage-meaning-causes-examples-prevention" className="btn btn-outline" style={{ marginTop: '1.5rem', alignSelf: 'flex-start' }}>Read Article</Link>
-            </div>
+          <div className="fade-up delay-1" style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {BOUNCE_BLOGS.map((blog, index) => (
+              <div 
+                key={index} 
+                className="plan-card" 
+                style={{ textAlign: 'left', padding: '1.5rem', cursor: 'pointer', display: 'flex', flexDirection: 'column' }} 
+                onClick={() => toggleAccordion(index)}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <h3 style={{ margin: 0, fontSize: '1.25rem', paddingRight: '1rem' }}>{blog.title}</h3>
+                  <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--primary)' }}>
+                    {openIndex === index ? '−' : '+'}
+                  </span>
+                </div>
+                
+                {openIndex === index && (
+                  <div style={{ marginTop: '1rem', borderTop: '1px solid var(--border)', paddingTop: '1rem' }}>
+                    <p className="plan-desc" style={{ marginBottom: '1.5rem' }}>
+                      {blog.desc}
+                    </p>
+                    <Link 
+                      to={blog.link} 
+                      className="btn btn-outline" 
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Read Article
+                    </Link>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </Section>

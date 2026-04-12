@@ -59,14 +59,14 @@ export default function Home() {
 
             <div className="hero-card dashboard-hero-card">
               <div className="hero-card-header">
-                 <div className="hero-mac-dots"><span className="red"></span><span className="yellow"></span><span className="green"></span></div>
-                 <div className="hero-card-title-center"><BarChartIcon className="inline-icon" /> Sustainability Dashboard</div>
+                <div className="hero-mac-dots"><span className="red"></span><span className="yellow"></span><span className="green"></span></div>
+                <div className="hero-card-title-center"><BarChartIcon className="inline-icon" /> Sustainability Dashboard</div>
               </div>
               <div className="stat-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                 {[
                   { num: '₹30L+', label: 'Avg. savings vs hiring' },
                   { num: '100%', label: 'Verification ready' },
-                  { num: '5', label: 'Frameworks covered' },
+                  { num: '15+', label: 'Frameworks covered' },
                   { num: '0', label: 'Rejected reports' },
                 ].map(({ num, label }) => (
                   <div className="stat-item text-left" key={label} style={{ background: '#fff', border: '1px solid var(--clr-border)' }}>
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
               <div className="trust-strip justify-center">
                 <div className="avatar-stack">
-                  {['AK','SR','PM'].map(i => <div key={i} className="avatar">{i}</div>)}
+                  {['AK', 'SR', 'PM'].map(i => <div key={i} className="avatar">{i}</div>)}
                 </div>
                 Expert team activated
               </div>
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
           <div className="steps-grid">
             {[
-              { n: 1, title: 'Choose Your Requirement', desc: 'Select the frameworks relevant to your business.', tags: ['CBAM','ESG','BRSR','EcoVadis','TCFD'] },
+              { n: 1, title: 'Choose Your Requirement', desc: 'Select the frameworks relevant to your business.', tags: ['CBAM', 'ESG', 'BRSR', 'EcoVadis', 'TCFD'] },
               { n: 2, title: 'Get Your Virtual Team', desc: 'Certified experts are assigned directly to your company.' },
               { n: 3, title: 'We Handle Everything', desc: 'Data collection, reporting, compliance and implementation — done for you.' },
               { n: 4, title: 'Submit With Confidence', desc: 'Your report is fully ready for third-party verification.' },
@@ -168,7 +168,7 @@ export default function Home() {
               <div className="testimonial-author">Mark Connop</div>
               <div className="testimonial-role">Client Services Manager, University of Birmingham</div>
             </div>
-            
+
             <div className="testimonial-glance">
               <h3>At-a-Glance</h3>
               <div className="glance-list">
@@ -178,7 +178,7 @@ export default function Home() {
                 <div className="glance-item"><strong>Services:</strong> <span className="glance-link">Sustainability Services</span></div>
                 <div className="glance-item"><strong>Region:</strong> <span className="glance-link">Europe</span></div>
                 <div className="glance-item"><strong>Processor:</strong> <span className="glance-link">AMD</span> <span className="glance-link">Intel</span></div>
-                <div className="glance-item" style={{lineHeight: 1.5}}><strong>Topic:</strong> <span className="glance-link">Flexibility and Agility</span> <span className="glance-link">Productivity and Collaboration</span> <span className="glance-link">Sustainability</span></div>
+                <div className="glance-item" style={{ lineHeight: 1.5 }}><strong>Topic:</strong> <span className="glance-link">Flexibility and Agility</span> <span className="glance-link">Productivity and Collaboration</span> <span className="glance-link">Sustainability</span></div>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function Home() {
                   { title: 'No repeated consulting costs', desc: 'One flat subscription replaces expensive one-time consultant engagements.' },
                   { title: 'Always up-to-date reports', desc: 'We proactively update your reports as regulations and standards evolve.' },
                   { title: 'Lower rejection risk', desc: 'Expert-built reports mean fewer errors, fewer rejections, fewer headaches.' },
-                  { title: 'Simple subscription pricing', desc: 'Predictable annual cost. No hidden fees. Starting at ₹3,49,999/year.' },
+                  { title: 'Simple subscription pricing', desc: '90% lower cost than hiring a team' },
                 ].map(({ title, desc }, i) => (
                   <div className={`why-item fade-up delay-${(i % 4) + 1}`} key={title}>
                     <div className="why-bullet"><CheckIcon /></div>
@@ -214,7 +214,7 @@ export default function Home() {
               </div>
               {[
                 ['Hire full-time team', 'Subscription team'],
-                ['₹30L+ per engagement', 'From ₹3.5L / year'],
+                ['₹30L+ per engagement', '90% low cost'],
                 ['One-time consultants', 'Year-round support'],
                 ['Risk of rejection', 'Verification-ready'],
                 ['Outdated data', 'Real-time dashboard'],

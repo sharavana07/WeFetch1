@@ -48,25 +48,16 @@ export default function Tools() {
               </div>
               <h3>BRSR Readiness Check</h3>
               <p>Assess your current sustainability reporting maturity and identify gaps before the SEBI BRSR mandate deadline.</p>
-              <Link to="/score" className="text-link">Take Assessment <i className="las la-arrow-right"></i></Link>
+              <a href="https://calendly.com/balajiselvarajofficial/wefetch-demo?month=2026-04" target="_blank" rel="noopener noreferrer" className="text-link">Take Assessment <i className="las la-arrow-right"></i></a>
             </div>
 
             <div className="tool-card">
               <div className="tool-icon">
-                <i className="las la-leaf"></i>
+                <i className="las la-clipboard-check"></i>
               </div>
-              <h3>Scope 1 & 2 Estimator</h3>
-              <p>A quick spreadsheet-based tool to get a baseline estimate of your direct and indirect greenhouse gas emissions.</p>
-              <Link to="#" className="text-link">Download Template <i className="las la-arrow-right"></i></Link>
-            </div>
-            
-            <div className="tool-card">
-              <div className="tool-icon">
-                <i className="las la-file-contract"></i>
-              </div>
-              <h3>CSRD Gap Analysis</h3>
-              <p>Understand how the EU's Corporate Sustainability Reporting Directive impacts your business and what data you need to collect.</p>
-              <Link to="#" className="text-link">Start Analysis <i className="las la-arrow-right"></i></Link>
+              <h3>Custom ESG Report Readiness Score Check</h3>
+              <p>Check your custom ESG report’s readiness score for third-party verification and reduce the risk of rejection with our free assessment</p>
+              <a href="https://calendly.com/balajiselvarajofficial/wefetch-demo?month=2026-04" target="_blank" rel="noopener noreferrer" className="text-link">Take Assessment <i className="las la-arrow-right"></i></a>
             </div>
           </div>
         </div>

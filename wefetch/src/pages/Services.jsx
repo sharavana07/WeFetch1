@@ -38,7 +38,7 @@ export default function Services() {
 
   return (
     <main className="services-page" style={{ paddingTop: '100px' }}>
-      
+
       {/* ===== HERO COMPONENT ===== */}
       <Section className="srv-hero" style={{ minHeight: 'auto', padding: '60px 24px 40px' }}>
         <div className="container text-center">
@@ -51,7 +51,7 @@ export default function Services() {
           {/* Clean Segmented Tab Navigation */}
           <div className="srv-segmented-tabs fade-up delay-3">
             {tabs.map((tab, idx) => (
-              <button 
+              <button
                 key={idx}
                 className={`srv-tab-trigger ${activeTab === idx ? 'active' : ''}`}
                 onClick={() => setActiveTab(idx)}
@@ -66,7 +66,7 @@ export default function Services() {
       {/* ===== TAB CONTENT COMPONENT ===== */}
       <Section className="srv-tab-content bg-dark-2" style={{ padding: '80px 24px', minHeight: '70vh' }}>
         <div className="container fade-up visible">
-          
+
           {/* ================= TAB 1: CBAM ================= */}
           {activeTab === 0 && (
             <div className="tab-pane-content fade-in">
@@ -103,40 +103,52 @@ export default function Services() {
               <div className="srv-content-grid" style={{ gap: '60px' }}>
                 <div>
                   <h3 style={{ marginBottom: '24px' }}>Manage Your <span className="highlight">CBAM Compliance</span> in One Flow</h3>
-                  <ul className="check-list srv-checklist">
-                    <li><CheckIcon /> <strong>Data Collection Made Simple:</strong> Collect and organize raw materials, energy, and production data across operations with structured templates.</li>
-                    <li><CheckIcon /> <strong>Accurate Emissions Calculation:</strong> Calculate embedded emissions at a product level using EU-approved methodologies.</li>
-                    <li><CheckIcon /> <strong>Quarterly Reporting, Done Right:</strong> Prepare and maintain CBAM reports with complete documentation, ready for submission.</li>
-                    <li><CheckIcon /> <strong>Supplier Data Coordination:</strong> Track and manage supplier data efficiently with follow-ups and structured inputs.</li>
-                    <li><CheckIcon /> <strong>Verification-Ready Outputs:</strong> Maintain audit-ready documentation aligned with EU standards, with full support.</li>
-                    <li><CheckIcon /> <strong>Submission & Compliance Closure:</strong> Handle submissions, revisions, and coordination to ensure complete compliance.</li>
-                  </ul>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', marginTop: '32px' }}>
+                    {[
+                      { title: 'Data Collection Made Simple:', desc: 'Collect and organize raw materials, energy, and production data across operations with structured templates.' },
+                      { title: 'Accurate Emissions Calculation:', desc: 'Calculate embedded emissions at a product level using EU-approved methodologies.' },
+                      { title: 'Quarterly Reporting, Done Right:', desc: 'Prepare and maintain CBAM reports with complete documentation, ready for submission.' },
+                      { title: 'Supplier Data Coordination:', desc: 'Track and manage supplier data efficiently with follow-ups and structured inputs.' },
+                      { title: 'Verification-Ready Outputs:', desc: 'Maintain audit-ready documentation aligned with EU standards, with full support.' },
+                      { title: 'Submission & Compliance Closure:', desc: 'Handle submissions, revisions, and coordination to ensure complete compliance.' }
+                    ].map(item => (
+                      <div key={item.title} style={{ display: 'grid', gridTemplateColumns: 'minmax(200px, 35%) 1fr', gap: '24px', alignItems: 'start' }}>
+                        <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                           <CheckIcon style={{ flexShrink: 0, marginTop: '4px', color: 'var(--clr-accent)', width: '24px', height: '24px' }} /> 
+                           <strong style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>{item.title}</strong>
+                        </div>
+                        <div style={{ fontSize: '1.1rem', lineHeight: '1.5' }}>
+                           {item.desc}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="card bg-dark" style={{ border: '1px solid var(--clr-border)', padding: '40px' }}>
-                  <h3 style={{ marginBottom: '16px' }}><GlobeIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> End-to-End Execution</h3>
+                  <h3 style={{ marginBottom: '16px' }}><GlobeIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> End-to-End Execution</h3>
                   <p style={{ marginBottom: '24px' }}>From onboarding to final submission, every step is handled by a dedicated CBAM team.</p>
                   <ul className="check-list srv-checklist-compact">
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Product and process mapping</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Emission source identification</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Data system setup</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Emissions calculation and validation</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Reporting and documentation</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Verification coordination</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Submission support</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Product and process mapping</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Emission source identification</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Data system setup</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Emissions calculation and validation</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Reporting and documentation</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Verification coordination</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Submission support</li>
                   </ul>
                 </div>
               </div>
 
               <div className="srv-content-grid" style={{ gap: '60px', marginTop: '80px' }}>
                 <div className="card" style={{ padding: '40px' }}>
-                  <h3 style={{ marginBottom: '16px' }}><CalendarIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Continuous Compliance</h3>
+                  <h3 style={{ marginBottom: '16px' }}><CalendarIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Continuous Compliance</h3>
                   <p style={{ marginBottom: '24px' }}>CBAM is an ongoing process. The Virtual Team ensures:</p>
                   <ul className="check-list srv-checklist-compact">
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Continuous data tracking</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Regular compliance updates</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Improved reporting accuracy over time</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Adaptation to regulatory changes</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Continuous data tracking</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Regular compliance updates</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Improved reporting accuracy over time</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Adaptation to regulatory changes</li>
                   </ul>
                 </div>
 
@@ -149,7 +161,7 @@ export default function Services() {
                     <li><CheckIcon /> Quarterly reporting support</li>
                     <li><CheckIcon /> Emission calculations</li>
                     <li><CheckIcon /> Verification-ready docs</li>
-                    <li><CheckIcon /> 3rd-party verification calc</li>
+                    <li><CheckIcon /> End to End Decarbonisation Support</li>
                     <li><CheckIcon /> Continuous compliance</li>
                     <li><CheckIcon /> Integrated software platform</li>
                   </ul>
@@ -212,18 +224,18 @@ export default function Services() {
                 </div>
 
                 <div className="card bg-dark" style={{ border: '1px solid var(--clr-border)', padding: '40px' }}>
-                  <h3 style={{ marginBottom: '16px' }}><TrophyIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Structured Approach</h3>
+                  <h3 style={{ marginBottom: '16px' }}><TrophyIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Structured Approach</h3>
                   <p style={{ marginBottom: '24px' }}>A clear execution model ensures consistency and scalability:</p>
                   <ul className="check-list srv-checklist-compact">
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Understand current performance and gaps</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Build structured documentation systems</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Execute submission with optimized responses</li>
-                    <li><ArrowRightIcon className="inline-icon" style={{color: 'var(--clr-accent)'}}/> Continuously improve scores and outcomes</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Understand current performance and gaps</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Build structured documentation systems</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Execute submission with optimized responses</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> Continuously improve scores and outcomes</li>
                   </ul>
-                  
+
                   <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--clr-border)' }}>
-                     <h4 style={{ marginBottom: '12px' }}>Continuous Improvement</h4>
-                     <p style={{ fontSize: '0.9rem', color: 'var(--clr-text-muted)' }}>EcoVadis is an ongoing process, not a one-time submission. The team ensures stronger documentation and better alignment with scoring criteria to improve performance year over year.</p>
+                    <h4 style={{ marginBottom: '12px' }}>Continuous Improvement</h4>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--clr-text-muted)' }}>EcoVadis is an ongoing process, not a one-time submission. The team ensures stronger documentation and better alignment with scoring criteria to improve performance year over year.</p>
                   </div>
                 </div>
               </div>
@@ -287,74 +299,74 @@ export default function Services() {
               </div>
 
               <div className="srv-content-grid" style={{ gap: '40px', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', alignItems: 'stretch' }}>
-                
-                  {/* Row 1 */}
-                  <div className="card">
-                    <h3 style={{ marginBottom: '20px' }}>Disclosure & <span className="highlight">Reporting Frameworks</span></h3>
-                    <ul className="check-list srv-checklist-compact">
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>GRI Reporting:</strong> Standardized ESG reporting aligned with global disclosure practices</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>CDP Disclosure:</strong> Climate and environmental disclosures for investors and stakeholders</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>IFRS S1 & S2:</strong> Financial and climate-related reporting aligned with global standards</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>TCFD Reporting:</strong> Climate risk, governance, and strategy disclosures</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Integrated Reporting:</strong> Combined financial and sustainability reporting in one framework</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>SASB Reporting:</strong> Industry-specific ESG disclosures for investor decision-making</li>
-                    </ul>
-                  </div>
 
-                  <div className="card">
-                    <h3 style={{ marginBottom: '20px' }}>Compliance <span className="highlight">Frameworks</span></h3>
-                    <ul className="check-list srv-checklist-compact">
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>BRSR & BRSR Core:</strong> Mandatory ESG compliance and reporting for Indian listed companies</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>CSRD Compliance:</strong> EU sustainability reporting requirements</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>EU Taxonomy:</strong> Classification of environmentally sustainable activities</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Supply Chain Due Diligence (LkSG):</strong> Human rights and environmental compliance across supply chains</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>UK SECR:</strong> Energy and carbon reporting requirements</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>US SEC Climate Disclosure:</strong> Climate-related disclosure requirements</li>
-                    </ul>
-                  </div>
+                {/* Row 1 */}
+                <div className="card">
+                  <h3 style={{ marginBottom: '20px' }}>Disclosure & <span className="highlight">Reporting Frameworks</span></h3>
+                  <ul className="check-list srv-checklist-compact">
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>GRI Reporting:</strong> Standardized ESG reporting aligned with global disclosure practices</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>CDP Disclosure:</strong> Climate and environmental disclosures for investors and stakeholders</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>IFRS S1 & S2:</strong> Financial and climate-related reporting aligned with global standards</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>TCFD Reporting:</strong> Climate risk, governance, and strategy disclosures</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Integrated Reporting:</strong> Combined financial and sustainability reporting in one framework</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>SASB Reporting:</strong> Industry-specific ESG disclosures for investor decision-making</li>
+                  </ul>
+                </div>
 
-                  {/* Row 2 */}
-                  <div className="card" style={{ background: 'var(--clr-dark)' }}>
-                    <h3 style={{ marginBottom: '20px' }}>Climate, Carbon & <span className="highlight">Net Zero</span></h3>
-                    <ul className="check-list srv-checklist-compact">
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Net Zero & SBTi Strategy:</strong> Emission reduction targets aligned with global climate goals</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Carbon Footprint (Scope 1, 2, 3):</strong> Measurement and tracking of total organizational emissions</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Life Cycle Assessment (LCA):</strong> Environmental impact analysis across the product lifecycle</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Product Carbon Footprint (PCF):</strong> Emissions calculation at product level</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Energy Audit & Reduction:</strong> Identify inefficiencies and reduce energy consumption</li>
-                    </ul>
-                  </div>
+                <div className="card">
+                  <h3 style={{ marginBottom: '20px' }}>Compliance <span className="highlight">Frameworks</span></h3>
+                  <ul className="check-list srv-checklist-compact">
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>BRSR & BRSR Core:</strong> Mandatory ESG compliance and reporting for Indian listed companies</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>CSRD Compliance:</strong> EU sustainability reporting requirements</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>EU Taxonomy:</strong> Classification of environmentally sustainable activities</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Supply Chain Due Diligence (LkSG):</strong> Human rights and environmental compliance across supply chains</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>UK SECR:</strong> Energy and carbon reporting requirements</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>US SEC Climate Disclosure:</strong> Climate-related disclosure requirements</li>
+                  </ul>
+                </div>
 
-                  <div className="card" style={{ background: 'var(--clr-dark)' }}>
-                    <h3 style={{ marginBottom: '20px' }}>ESG Ratings & <span className="highlight">Certifications</span></h3>
-                    <ul className="check-list srv-checklist-compact">
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>EcoVadis Rating Support:</strong> Improve sustainability ratings for global supplier evaluations</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>QS Sustainability Ranking:</strong> ESG-based rankings for universities and institutions</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>MSCI ESG Rating Support:</strong> ESG ratings used by investors for risk assessment</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>Sustainalytics Rating Support:</strong> ESG risk ratings for investment decisions</li>
-                      <li><ArrowRightIcon className="inline-icon" style={{color:'var(--clr-accent)'}}/> <strong>ISS ESG Rating Support:</strong> Corporate ESG performance evaluation for investors</li>
-                    </ul>
-                  </div>
+                {/* Row 2 */}
+                <div className="card" style={{ background: 'var(--clr-dark)' }}>
+                  <h3 style={{ marginBottom: '20px' }}>Climate, Carbon & <span className="highlight">Net Zero</span></h3>
+                  <ul className="check-list srv-checklist-compact">
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Net Zero & SBTi Strategy:</strong> Emission reduction targets aligned with global climate goals</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Carbon Footprint (Scope 1, 2, 3):</strong> Measurement and tracking of total organizational emissions</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Life Cycle Assessment (LCA):</strong> Environmental impact analysis across the product lifecycle</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Product Carbon Footprint (PCF):</strong> Emissions calculation at product level</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Energy Audit & Reduction:</strong> Identify inefficiencies and reduce energy consumption</li>
+                  </ul>
+                </div>
+
+                <div className="card" style={{ background: 'var(--clr-dark)' }}>
+                  <h3 style={{ marginBottom: '20px' }}>ESG Ratings & <span className="highlight">Certifications</span></h3>
+                  <ul className="check-list srv-checklist-compact">
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>EcoVadis Rating Support:</strong> Improve sustainability ratings for global supplier evaluations</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>QS Sustainability Ranking:</strong> ESG-based rankings for universities and institutions</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>MSCI ESG Rating Support:</strong> ESG ratings used by investors for risk assessment</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>Sustainalytics Rating Support:</strong> ESG risk ratings for investment decisions</li>
+                    <li><ArrowRightIcon className="inline-icon" style={{ color: 'var(--clr-accent)' }} /> <strong>ISS ESG Rating Support:</strong> Corporate ESG performance evaluation for investors</li>
+                  </ul>
+                </div>
 
               </div>
 
               <div className="card bg-dark" style={{ marginTop: '40px', padding: '40px', border: '1px solid var(--clr-accent-glow)' }}>
-                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
-                    <div>
-                      <span className="section-label">One System. Multiple ESG Requirements.</span>
-                      <h3 style={{ marginBottom: '16px' }}>Custom ESG Virtual Team</h3>
-                      <p>A fully dedicated ESG setup tailored to your organization. Replace fragmented efforts, multiple consultants, and internal complexity with a single, structured ESG system managed by expert teams.</p>
-                    </div>
-                    <div>
-                      <ul className="check-list">
-                        <li><CheckIcon className="inline-icon"/> Dedicated ESG Manager</li>
-                        <li><CheckIcon className="inline-icon"/> Multiple frameworks managed together</li>
-                        <li><CheckIcon className="inline-icon"/> Monthly ESG reporting</li>
-                        <li><CheckIcon className="inline-icon"/> Continuous tracking and improvements</li>
-                        <li><CheckIcon className="inline-icon"/> Acts as your Virtual Sustainability Department</li>
-                      </ul>
-                    </div>
-                 </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+                  <div>
+                    <span className="section-label">One System. Multiple ESG Requirements.</span>
+                    <h3 style={{ marginBottom: '16px' }}>Custom ESG Virtual Team</h3>
+                    <p>A fully dedicated ESG setup tailored to your organization. Replace fragmented efforts, multiple consultants, and internal complexity with a single, structured ESG system managed by expert teams.</p>
+                  </div>
+                  <div>
+                    <ul className="check-list">
+                      <li><CheckIcon className="inline-icon" /> Dedicated ESG Manager</li>
+                      <li><CheckIcon className="inline-icon" /> Multiple frameworks managed together</li>
+                      <li><CheckIcon className="inline-icon" /> Monthly ESG reporting</li>
+                      <li><CheckIcon className="inline-icon" /> Continuous tracking and improvements</li>
+                      <li><CheckIcon className="inline-icon" /> Acts as your Virtual Sustainability Department</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <div className="text-center" style={{ marginTop: '80px', paddingTop: '60px', paddingBottom: '80px', borderTop: '1px solid var(--clr-border)' }}>
@@ -365,7 +377,7 @@ export default function Services() {
               </div>
             </div>
           )}
-          
+
         </div>
       </Section>
     </main>
