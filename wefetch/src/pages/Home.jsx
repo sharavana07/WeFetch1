@@ -62,7 +62,7 @@ export default function Home() {
                 <div className="hero-mac-dots"><span className="red"></span><span className="yellow"></span><span className="green"></span></div>
                 <div className="hero-card-title-center"><BarChartIcon className="inline-icon" /> Sustainability Dashboard</div>
               </div>
-              <div className="stat-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+              <div className="stat-grid">
                 {[
                   { num: '₹30L+', label: 'Avg. savings vs hiring' },
                   { num: '100%', label: 'Verification ready' },

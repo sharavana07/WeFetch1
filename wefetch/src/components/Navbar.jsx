@@ -80,9 +80,10 @@ export default function Navbar() {
             <Link to="/about" className={pathname === '/about' ? 'active' : ''}>About Us</Link>
             <Link to="/blogs" className={pathname.startsWith('/blogs') || pathname.startsWith('/emisson-leakage') ? 'active' : ''}>Blogs</Link>
             <Link to="/tools" className={pathname === '/tools' ? 'active' : ''}>Free Tools</Link>
+            <Link to="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact Us</Link>
           </div>
           <div className="navbar-actions">
-            <Link to="/services#book-demo" className="btn btn-primary">Book Demo</Link>
+            <a href="https://calendly.com/balajiselvarajofficial/wefetch-demo?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Demo</a>
           </div>
           <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
             <span /><span /><span />
@@ -97,7 +98,8 @@ export default function Navbar() {
         <Link to="/about">About Us</Link>
         <Link to="/blogs">Blogs</Link>
         <Link to="/tools">Free Tools</Link>
-        <Link to="/services#book-demo" className="btn btn-primary">Book Demo</Link>
+        <Link to="/contact">Contact Us</Link>
+        <a href="https://calendly.com/balajiselvarajofficial/wefetch-demo?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Demo</a>
       </div>
     </>
   );

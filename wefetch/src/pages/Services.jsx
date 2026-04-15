@@ -112,7 +112,7 @@ export default function Services() {
                       { title: 'Verification-Ready Outputs:', desc: 'Maintain audit-ready documentation aligned with EU standards, with full support.' },
                       { title: 'Submission & Compliance Closure:', desc: 'Handle submissions, revisions, and coordination to ensure complete compliance.' }
                     ].map(item => (
-                      <div key={item.title} style={{ display: 'grid', gridTemplateColumns: 'minmax(200px, 35%) 1fr', gap: '24px', alignItems: 'start' }}>
+                      <div key={item.title} className="cbam-feature-grid">
                         <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                            <CheckIcon style={{ flexShrink: 0, marginTop: '4px', color: 'var(--clr-accent)', width: '24px', height: '24px' }} /> 
                            <strong style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>{item.title}</strong>
@@ -155,7 +155,7 @@ export default function Services() {
                 <div>
                   <h3 style={{ marginBottom: '24px' }}>What You <span className="highlight">Get</span></h3>
                   <p style={{ marginBottom: '24px' }}>Replace complex internal processes and fragmented consulting with a single, structured system managed by experts. Start Your CBAM Compliance Journey Today.</p>
-                  <ul className="check-list srv-checklist" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <ul className="check-list srv-checklist two-col-list">
                     <li><CheckIcon /> Dedicated Virtual Team</li>
                     <li><CheckIcon /> End-to-end management</li>
                     <li><CheckIcon /> Quarterly reporting support</li>
@@ -243,7 +243,7 @@ export default function Services() {
               <div className="srv-content-grid" style={{ gap: '60px', marginTop: '80px' }}>
                 <div style={{ gridColumn: '1 / -1' }} className="card">
                   <h3 style={{ marginBottom: '24px', textAlign: 'center' }}>What You <span className="highlight">Get</span></h3>
-                  <ul className="check-list srv-checklist" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                  <ul className="check-list srv-checklist auto-col-list">
                     <li><CheckIcon /> Dedicated EcoVadis Virtual Team</li>
                     <li><CheckIcon /> End-to-end assessment management</li>
                     <li><CheckIcon /> Questionnaire response optimization</li>
@@ -298,7 +298,7 @@ export default function Services() {
                 </div>
               </div>
 
-              <div className="srv-content-grid" style={{ gap: '40px', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', alignItems: 'stretch' }}>
+              <div className="srv-content-grid" style={{ gap: '40px', alignItems: 'stretch' }}>
 
                 {/* Row 1 */}
                 <div className="card">
@@ -351,7 +351,7 @@ export default function Services() {
               </div>
 
               <div className="card bg-dark" style={{ marginTop: '40px', padding: '40px', border: '1px solid var(--clr-accent-glow)' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+                <div className="custom-team-split">
                   <div>
                     <span className="section-label">One System. Multiple ESG Requirements.</span>
                     <h3 style={{ marginBottom: '16px' }}>Custom ESG Virtual Team</h3>

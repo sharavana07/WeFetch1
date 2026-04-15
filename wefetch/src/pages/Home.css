@@ -61,7 +61,7 @@
 .hero-mac-dots .yellow { background: #ffbd2e; }
 .hero-mac-dots .green { background: #27c93f; }
 .hero-card-title-center { width: 100%; text-align: center; font-size: 0.95rem; font-weight: 600; color: var(--clr-text-light); }
-.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .stat-item { background: rgba(0,184,148,0.04); border: 1px solid rgba(0,184,148,0.12); border-radius: var(--radius-md); padding: 20px; transition: var(--transition); }
 .stat-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(15,107,92,0.06); }
 .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--clr-accent); line-height: 1; }

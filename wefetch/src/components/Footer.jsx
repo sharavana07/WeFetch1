@@ -91,15 +91,18 @@ export default function Footer() {
             <Link to="/gdpr">GDPR</Link>
           </div>
           <div className="footer-socials">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="social-icon">
+            <a href="https://www.linkedin.com/company/wefetchtechnologies/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="social-icon">
               <i className="lab la-linkedin-in"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="social-icon">
+            <a href="https://www.facebook.com/share/1AtbzUNm6e/" target="_blank" rel="noreferrer" aria-label="Facebook" className="social-icon">
+              <i className="lab la-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/wefetchtechnologies?igsh=MXNiZ2tyNmZ2NnRncw==" target="_blank" rel="noreferrer" aria-label="Instagram" className="social-icon">
               <i className="lab la-instagram"></i>
             </a>
-            <Link to="/contact" aria-label="Contact" className="social-icon">
+            <a href="mailto:contact@wefetch.tech" aria-label="Email" className="social-icon">
               <i className="las la-envelope"></i>
-            </Link>
+            </a>
             <button className="nav-subscribe-btn">
               <i className="las la-bell" style={{marginRight: '6px'}}></i>Subscribe
             </button>
