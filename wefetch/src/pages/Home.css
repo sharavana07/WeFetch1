@@ -179,7 +179,7 @@
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .hero h1 { font-size: 2.8rem; }
-  .hero-inner   { grid-template-columns: 1fr; display: flex; flex-direction: column; }
+  .hero-inner   { grid-template-columns: 1fr; display: flex; flex-direction: column; min-width: 0; }
   .stat-grid { grid-template-columns: 1fr 1fr !important; }
   .team-grid    { grid-template-columns: 1fr; }
   .team-visual  { display: none; }
@@ -195,7 +195,9 @@
   .hero { padding: 120px 20px 80px; }
   .hero h1 { font-size: 2.2rem; }
   .hero-sub { font-size: 1rem; }
-  .hero-card.dashboard-hero-card { padding: 20px 16px; }
+  .left-blob { left: -10px; }
+  .right-blob { right: -10px; }
+  .hero-card.dashboard-hero-card { padding: 20px 16px; min-width: 0; }
   .stat-grid { gap: 10px; }
   .stat-item { padding: 16px 12px; }
   .stat-num { font-size: 1.4rem; }
